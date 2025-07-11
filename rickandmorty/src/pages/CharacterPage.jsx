@@ -47,18 +47,21 @@ export default function CharacterPage() {
   if (error) return <p className="text-red-500">Error loading characters</p>;
   return (
     <>
-      <div className="flex space-x-4 mt-0.5 mb-2">
+      <div className="flex items-center space-x-4 mt-0.5 mb-2">
         <Button
           variant="primary"
-          className="flex-1/2"
+          className="flex-5/12"
           onClick={handlePrevClick}
           disabled={currentPage === 1}
         >
           Previous
         </Button>
+        <div className="flex-2/12 text-center">
+          Page {currentPage} of {info.pages}
+        </div>
         <Button
           variant="primary"
-          className="flex-1/2"
+          className="flex-5/12"
           onClick={handleNextClick}
           disabled={!info.next} // or `currentPage === info.pages`
         >
@@ -72,18 +75,21 @@ export default function CharacterPage() {
           <CharacterCard key={character.id} character={character} />
         ))}
       </div>
-      <div className="flex space-x-4 mt-2">
+      <div className="flex items-center space-x-4 mt-2">
         <Button
           variant="primary"
-          className="flex-1/2"
+          className="flex-5/12"
           onClick={handlePrevClick}
           disabled={currentPage === 1}
         >
           Previous
         </Button>
+        <div className="flex-2/12 text-center">
+          Page {currentPage} of {info.pages}
+        </div>
         <Button
           variant="primary"
-          className="flex-1/2"
+          className="flex-5/12"
           onClick={handleNextClick}
           disabled={!info.next} // or `currentPage === info.pages`
         >

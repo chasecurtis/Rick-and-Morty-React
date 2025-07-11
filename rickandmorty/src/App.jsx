@@ -3,6 +3,7 @@ import "./App.css";
 import AppNavbar from "./components/AppNavbar";
 import { Outlet } from "react-router-dom";
 import logo from "./assets/rickipedia.png";
+import { Col, Row, Container } from "react-bootstrap";
 
 function App() {
   const [count, setCount] = useState(0);
